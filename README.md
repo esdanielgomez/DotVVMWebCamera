@@ -1,4 +1,4 @@
-# DotVVM Web Camera
+# DotVVM Web Camera with JS Directive
 
 Hey there, here's a demo in ASP.NET 7 with DotVVM to capturing images from a web camera.
 
