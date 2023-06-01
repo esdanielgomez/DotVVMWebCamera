@@ -1,0 +1,85 @@
+﻿:root {
+    --theme-black: #222;
+    --theme-background: #dddfe2;
+    --sidebar-width: 230px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    background-color: var(--theme-background);
+    margin: 0 0 40px; /* bottom = footer height */
+}
+
+footer {
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    color: white;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.footer-hidden {
+    background-color: var(--theme-black);
+}
+
+.nav-button {
+    padding: 5px 0;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100%;
+    background-color: var(--theme-black);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding: 0 10px 0;
+}
+
+.main-dish {
+    margin-left: var(--sidebar-width);
+    padding: 20px 40px 0;
+    height: 100%;
+}
+
+ul li a {
+    color: aliceblue;
+}
+
+.logo {
+    margin: 20px auto 40px auto;
+    width: 100%;
+}
+
+    .logo img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+.btn-general {
+    width: 100%;
+    font-size: 15px;
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 768px) {
+    .main-dish {
+        margin-left: 0;
+    }
+}

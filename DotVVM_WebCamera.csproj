@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.dothtml;**/*.dotmaster;**/*.dotcontrol" Exclude="obj/**/*.*;bin/**/*.*" CopyToPublishDirectory="Always" />
+    <None Remove="**/*.dothtml;**/*.dotmaster;**/*.dotcontrol" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="dotvvm_serialized_config.json.tmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotVVM.AspNetCore" Version="4.1.7" />
+    <PackageReference Include="DotVVM.HotReload.AspNetCore" Version="4.1.7" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\site.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\npm.js" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\webcamjs\build.sh" />
+    <None Include="wwwroot\webcamjs\DOCS.md" />
+    <None Include="wwwroot\webcamjs\flash\com\adobe\images\BitString.as" />
+    <None Include="wwwroot\webcamjs\flash\com\adobe\images\JPGEncoder.as" />
+    <None Include="wwwroot\webcamjs\flash\com\adobe\images\PNGEncoder.as" />
+    <None Include="wwwroot\webcamjs\flash\mx\utils\Base64Encoder.as" />
+    <None Include="wwwroot\webcamjs\flash\Webcam.as" />
+    <None Include="wwwroot\webcamjs\flash\Webcam.fla" />
+    <None Include="wwwroot\webcamjs\LICENSE" />
+    <None Include="wwwroot\webcamjs\README.md" />
+    <None Include="wwwroot\webcamjs\webcam.js" />
+    <None Include="wwwroot\webcamjs\webcam.min.js" />
+    <None Include="wwwroot\webcamjs\webcam.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\CameraPhotos\" />
+  </ItemGroup>
+</Project>

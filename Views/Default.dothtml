@@ -1,0 +1,77 @@
+﻿@viewModel DotVVM_WebCamera.ViewModels.DefaultViewModel, DotVVM_WebCamera
+@masterPage Views/MasterPage.dotmaster
+@js camera-module
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <dot:NamedCommand Name="ImageFileResult" Command="{staticCommand: (string file) => _root.ImageInput = file}" />
+
+    <div class="content">
+        <!-- Side Menu -->
+        <div class="hidden-xs sidebar">
+            <div class="logo">
+                <a href="https://dotvvm.com">
+                    <img src="DotVVM.png">
+                </a>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active">
+                    <a href="/">
+                        <span class="glyphicon glyphicon-eye-open nav-button"></span> Home
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <div class="main-dish">
+
+            <!-- Heading -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well">
+                        <h3 style="color: #1B3A87;" align="center"><b>DOTVVM WEB CAMERA</b></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Take picture section -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <!-- Head title -->
+                        <div class="panel-heading" style="background-color: #E7EEFF;"><b>Camera</b></div>
+                        <!-- Web camera video -->
+                        <div class="panel-body" align="center">
+                            <div id="my_camera"></div><br />
+                            <!-- Take picture option -->
+                            <dot:Button Text="Take Picture"
+                                        class="btn btn-success btn-lg btn-general"
+                                        Click="{staticCommand:_js.Invoke("take_snapshot");}" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Captured photo section -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+
+                        <!-- Head title -->
+                        <div class="panel-heading" style="background-color: #E7EEFF;" align="center">
+                            <b>Captured Photo</b>
+                        </div>
+
+                        <!-- Image section -->
+                        <div class="panel-body" align="center">
+                            <div id="results">
+                                Your captured image will appear here...
+                            </div>
+                            <br />
+                            {{value: ImageInput}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Main End -->
+    </div> <!-- Body End -->
+
+</dot:Content>

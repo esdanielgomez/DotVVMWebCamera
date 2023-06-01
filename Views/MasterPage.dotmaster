@@ -1,0 +1,13 @@
+﻿@viewModel DotVVM_WebCamera.ViewModels.MasterPageViewModel, DotVVM_WebCamera
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Web Camera</title>
+    <dot:RequiredResource Name="Styles" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <dot:ContentPlaceHolder ID="MainContent" />
+</body>
+</html>
